@@ -1,5 +1,7 @@
 package com.ha5fun.finalwork.pojo;
 
+import lombok.Data;
+
 import java.util.Objects;
 
 /**
@@ -7,6 +9,7 @@ import java.util.Objects;
  * @Company ha5fun.com
  * @Date 2020/9/21 8:29 下午
  */
+@Data
 public class RpmsOwnerPojo {
     private Object ownerId;
     private String ownerName;
@@ -17,4 +20,6 @@ public class RpmsOwnerPojo {
     private String ownerDep;
     private Object roleId;
     private int ownerDelete;
+
+
 }

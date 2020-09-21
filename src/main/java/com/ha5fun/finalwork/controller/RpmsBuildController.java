@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.swing.text.html.parser.Entity;
 import java.util.List;
@@ -17,11 +18,12 @@ import java.util.List;
  * @Date 2020/9/21 9:09 下午
  */
 @Controller
+@RequestMapping("/build/")
 public class RpmsBuildController {
     @Autowired
     private RpmsBuildService buildService;
 
-    @RequestMapping("test")
+    @RequestMapping(method = RequestMethod.GET , value = "selAllBuildings")
     public ResponseEntity<String> testSel(){
         List<RpmsBuildPojo> allBuilds = buildService.findAllBuilds();
         JSONObject jsonObject = new JSONObject();

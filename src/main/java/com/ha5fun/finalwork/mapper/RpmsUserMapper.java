@@ -5,13 +5,13 @@ import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
 public interface RpmsUserMapper {
-    int deleteByPrimaryKey(Integer memberId);
+    int deleteByPrimaryKey(String memberName);
 
     int insert(RpmsUserPojo record);
 
     int insertSelective(RpmsUserPojo record);
 
-    RpmsUserPojo selectByPrimaryKey(Integer memberId);
+    RpmsUserPojo selectByPrimaryKey(String memberName);
 
     int updateByPrimaryKeySelective(RpmsUserPojo record);
 

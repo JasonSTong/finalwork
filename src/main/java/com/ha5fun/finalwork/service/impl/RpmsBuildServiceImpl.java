@@ -22,4 +22,29 @@ public class RpmsBuildServiceImpl implements RpmsBuildService {
     public List<RpmsBuildPojo> findAllBuilds() {
         return null;
     }
+
+    @Override
+    public int deleteBuilds(int buildId) {
+        return 0;
+    }
+
+    @Override
+    public int updateBuild(RpmsBuildPojo rpmsBuild) {
+        return 0;
+    }
+
+    @Override
+    public int addBuilds(RpmsBuildPojo rpmsBuild) {
+        return 0;
+    }
+
+    @Override
+    public int updateBuild(RpmsBuildPojo rpmsBuild) {
+        return 0;
+    }
+
+    @Override
+    public int addBuilds(RpmsBuildPojo rpmsBuild) {
+        return 0;
+    }
 }

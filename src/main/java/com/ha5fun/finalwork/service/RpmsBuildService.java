@@ -17,9 +17,24 @@ public interface RpmsBuildService {
     List<RpmsBuildPojo> findAllBuilds() ;
 
     /**
-     *
-     * @return
+     * 通过主键id删除builds
+     * @param buildId
+     * @return 0 : 成功 1 ：失败
      */
-    RpmsBuildPojo selById(int id);
+    int deleteBuilds(int buildId);
+
+    /**
+     * 修改builds
+     * @param rpmsBuild
+     * @return 0 ：失败 1：成功
+     */
+    int updateBuild(RpmsBuildPojo rpmsBuild);
+
+    /**
+     * 添加builds
+     * @param rpmsBuild
+     * @return 0:失败 1：成功
+     */
+    int addBuilds(RpmsBuildPojo rpmsBuild);
 
 }

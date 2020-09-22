@@ -9,10 +9,6 @@ import lombok.Data;
  */
 @Data
 public class RpmsUserPojo implements Serializable {
-    /**
-     * 业主成员id
-     */
-    private Integer memberId;
 
     /**
      * 成员姓名

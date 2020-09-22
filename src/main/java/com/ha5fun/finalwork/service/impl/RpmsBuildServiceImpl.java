@@ -18,8 +18,14 @@ public class RpmsBuildServiceImpl implements RpmsBuildService {
     @Autowired
     private RpmsBuildMapper rpmsBuildMapper;
 
+
     @Override
     public List<RpmsBuildPojo> findAllBuilds() {
-        return null;
+        return rpmsBuildMapper.selAllBuildings();
+    }
+
+    @Override
+    public RpmsBuildPojo selById(int id) {
+        return rpmsBuildMapper.selectByPrimaryKey(id);
     }
 }

@@ -8,6 +8,7 @@ import java.util.List;
 @Mapper
 public interface RpmsBuildMapper {
 
+    List<RpmsBuildPojo> selAllBuildings();
 
     int deleteByPrimaryKey(Integer buildId);
 

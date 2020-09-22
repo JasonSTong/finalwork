@@ -3,6 +3,7 @@ package com.ha5fun.finalwork.controller;
 import com.alibaba.fastjson.JSONObject;
 import com.ha5fun.finalwork.pojo.RpmsBuildPojo;
 import com.ha5fun.finalwork.service.RpmsBuildService;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -27,6 +28,14 @@ public class RpmsBuildController {
         List<RpmsBuildPojo> allBuilds = buildService.findAllBuilds();
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("data",allBuilds);
+
+        return ResponseEntity.ok(jsonObject.toJSONString());
+    }
+    @RequestMapping(method = RequestMethod.GET ,value = "selById")
+    public ResponseEntity<String> selById(@Param("id") int id){
+        RpmsBuildPojo rpmsBuild = buildService.selById(id);
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("data",rpmsBuild);
 
         return ResponseEntity.ok(jsonObject.toJSONString());
     }

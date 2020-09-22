@@ -15,4 +15,11 @@ public interface RpmsBuildService {
      * @return 返回一个List<RpmsBuildPojo>集合
      */
     List<RpmsBuildPojo> findAllBuilds() ;
+
+    /**
+     *
+     * @return
+     */
+    RpmsBuildPojo selById(int id);
+
 }

@@ -13,6 +13,11 @@
   <sql id="Base_Column_List">
     build_id, build_name, build_start, build_finish, build_leak, build_area, build_delete
   </sql>
+  <select id="selAllBuildings" resultType="com.ha5fun.finalwork.pojo.RpmsBuildPojo">
+    select build_id, build_name, build_start, build_finish, build_leak, build_area, build_delete
+    from finalwork.RPMS_build
+  </select>
+
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />

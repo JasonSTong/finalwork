@@ -1,25 +1,50 @@
 package com.ha5fun.finalwork.pojo;
 
+import java.io.Serializable;
 import lombok.Data;
 
-import java.util.Objects;
-
 /**
- * @author chen
- * @Company ha5fun.com
- * @Date 2020/9/21 8:29 下午
+ * RPMS_member
+ * @author 
  */
 @Data
-public class RpmsOwnerPojo {
-    private Object ownerId;
-    private String ownerName;
-    private Object ownerSex;
-    private String ownerNative;
-    private String ownerPhone;
-    private String ownerIden;
-    private String ownerDep;
-    private Object roleId;
-    private int ownerDelete;
+public class RpmsOwnerPojo implements Serializable {
+    /**
+     * 业主成员id
+     */
+    private Integer memberId;
 
+    /**
+     * 成员姓名
+     */
+    private String memberName;
 
+    /**
+     * 成员性别
+     */
+    private Integer memberSex;
+
+    /**
+     * 成员籍贯
+     */
+    private String memberNative;
+
+    /**
+     * 联系方式
+     */
+    private String memberPhone;
+
+    /**
+     * 工作单位
+     */
+    private String memberComp;
+
+    /**
+     * 业主ID
+     */
+    private Integer ownerId;
+
+    private Integer memberDelete;
+
+    private static final long serialVersionUID = 1L;
 }

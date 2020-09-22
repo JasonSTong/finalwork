@@ -1,22 +1,49 @@
 package com.ha5fun.finalwork.pojo;
 
+import java.io.Serializable;
+import java.util.Date;
 import lombok.Data;
 
-import java.util.Date;
-import java.util.Objects;
-
 /**
- *@author chen
- *@Company ha5fun.com
- *@Date 2020/9/21 8:29 下午
+ * RPMS_build
+ * @author 
  */
 @Data
-public class RpmsBuildPojo {
-    private int buildId;
+public class RpmsBuildPojo implements Serializable {
+    /**
+     * 楼栋ID号
+     */
+    private Integer buildId;
+
+    /**
+     * 楼栋名
+     */
     private String buildName;
+
+    /**
+     * 开工时间
+     */
     private Date buildStart;
+
+    /**
+     * 竣工时间
+     */
     private Date buildFinish;
+
+    /**
+     * 漏洞信息
+     */
     private String buildLeak;
-    private double buildArea;
-    private int buildDelete;
+
+    /**
+     * 建筑面积
+     */
+    private Double buildArea;
+
+    /**
+     * 删除状态码(0,1)
+     */
+    private Integer buildDelete;
+
+    private static final long serialVersionUID = 1L;
 }

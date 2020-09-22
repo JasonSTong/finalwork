@@ -20,6 +20,6 @@ public class RpmsBuildServiceImpl implements RpmsBuildService {
 
     @Override
     public List<RpmsBuildPojo> findAllBuilds() {
-        return rpmsBuildMapper.selAllBuild();
+        return null;
     }
 }

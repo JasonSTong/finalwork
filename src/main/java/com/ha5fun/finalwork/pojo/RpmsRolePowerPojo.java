@@ -8,7 +8,7 @@ import lombok.Data;
  * @author 
  */
 @Data
-public class RpmsRoomPojo implements Serializable {
+public class RpmsRolePowerPojo implements Serializable {
     /**
      * 业主成员id
      */

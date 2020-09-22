@@ -11,7 +11,8 @@ import java.util.List;
  */
 public interface RpmsBuildService {
     /**
-     *
+     * 查询所有的Buildings
+     * @return 返回一个List<RpmsBuildPojo>集合
      */
     List<RpmsBuildPojo> findAllBuilds() ;
 }

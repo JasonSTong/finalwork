@@ -1,6 +1,7 @@
 package com.ha5fun.finalwork.controller;
 
 import com.alibaba.fastjson.JSONObject;
+import com.fasterxml.jackson.annotation.JsonAlias;
 import com.ha5fun.finalwork.pojo.RpmsBuildPojo;
 import com.ha5fun.finalwork.service.RpmsBuildService;
 import org.apache.ibatis.annotations.Param;
@@ -39,5 +40,16 @@ public class RpmsBuildController {
 
         return ResponseEntity.ok(jsonObject.toJSONString());
     }
+
+    public ResponseEntity<String> delById(@Param("id") int id ){
+        JSONObject jsonObject = new JSONObject();
+        RpmsBuildPojo rpmsBuildPojo = new RpmsBuildPojo();
+        rpmsBuildPojo.setBuildDelete(1);
+        int i = buildService.deleteBuilds(id, rpmsBuildPojo);
+
+        return  ;
+    }
+
+
 
 }

@@ -30,22 +30,12 @@ public class RpmsBuildServiceImpl implements RpmsBuildService {
     }
 
     @Override
-    public int deleteBuilds(int buildId) {
-        return 0;
+    public int deleteBuilds(int buildId , RpmsBuildPojo rpmsBuildPojo) {
+        return rpmsBuildMapper.deleteByPrimaryKey(buildId , rpmsBuildPojo);
     }
 
     @Override
-    public int updateBuild(RpmsBuildPojo rpmsBuild) {
-        return 0;
-    }
-
-    @Override
-    public int addBuilds(RpmsBuildPojo rpmsBuild) {
-        return 0;
-    }
-
-    @Override
-    public int updateBuild(RpmsBuildPojo rpmsBuild) {
+    public int updateBuild(int id ,RpmsBuildPojo rpmsBuild) {
         return 0;
     }
 
@@ -53,4 +43,6 @@ public class RpmsBuildServiceImpl implements RpmsBuildService {
     public int addBuilds(RpmsBuildPojo rpmsBuild) {
         return 0;
     }
+
+
 }

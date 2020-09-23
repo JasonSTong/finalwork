@@ -1,6 +1,5 @@
 package com.ha5fun.finalwork.service;
 
-import com.ha5fun.finalwork.pojo.RpmsRoom;
 import com.ha5fun.finalwork.pojo.RpmsRoomPojo;
 
 import java.util.List;

@@ -1,8 +1,6 @@
 package com.ha5fun.finalwork.service;
 
-import com.ha5fun.finalwork.pojo.RpmsOwner;
 import com.ha5fun.finalwork.pojo.RpmsOwnerPojo;
-import com.ha5fun.finalwork.pojo.RpmsRoom;
 
 import java.util.List;
 

@@ -18,7 +18,7 @@ public interface RpmsBuildMapper {
      * @param buildId
      * @return 返回删除状态吗
      */
-    int deleteByPrimaryKey(int buildId , RpmsBuildPojo rpmsBuildPojo);
+    int deleteByPrimaryKey(int buildId );
 
     /**
      * 新增楼层
@@ -41,9 +41,16 @@ public interface RpmsBuildMapper {
      */
     RpmsBuildPojo selectByPrimaryKey(Integer buildId);
 
+    /**
+     * 恢复删除的楼
+     * @param buildId
+     * @return
+     */
+    int reDelBuild(int buildId);
 
 //
-//    int updateByPrimaryKeySelective(RpmsBuildPojo record);
+    int updateByPrimaryKeySelective(int id , int buildDelete);
+
 //
 //    int updateByPrimaryKey(RpmsBuildPojo record);
 }

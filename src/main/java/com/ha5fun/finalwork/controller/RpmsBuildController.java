@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
 
@@ -40,14 +41,16 @@ public class RpmsBuildController {
 
         return ResponseEntity.ok(jsonObject.toJSONString());
     }
-
-    public ResponseEntity<String> delById(@Param("id") int id ){
-        JSONObject jsonObject = new JSONObject();
-        RpmsBuildPojo rpmsBuildPojo = new RpmsBuildPojo();
-        rpmsBuildPojo.setBuildDelete(1);
-        int i = buildService.deleteBuilds(id, rpmsBuildPojo);
-
-        return  ;
+    @RequestMapping(method = RequestMethod.GET,value = "delById")
+    @ResponseBody
+    public int delById(@Param("buildId") int buildId ){
+        System.out.println(buildId+"++++++++++++++++++++++++++++++++++++++++++");
+        buildService.deleteBuilds(buildId);
+        return  buildService.deleteBuilds(buildId);
+    }
+    @RequestMapping(method = RequestMethod.GET , value = "reDelBuild")
+    public int reDelId(@Param("buildId")int buildId ){
+        return buildService.reDelBuild(buildId);
     }
 
 

@@ -3,6 +3,7 @@ package com.ha5fun.finalwork.service.impl;
 import com.ha5fun.finalwork.mapper.RpmsBuildMapper;
 import com.ha5fun.finalwork.pojo.RpmsBuildPojo;
 import com.ha5fun.finalwork.service.RpmsBuildService;
+import com.sun.org.apache.xpath.internal.operations.Bool;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -30,9 +31,11 @@ public class RpmsBuildServiceImpl implements RpmsBuildService {
     }
 
     @Override
-    public int deleteBuilds(int buildId , RpmsBuildPojo rpmsBuildPojo) {
-        return rpmsBuildMapper.deleteByPrimaryKey(buildId , rpmsBuildPojo);
+    public int deleteBuilds(int buildId) {
+        System.out.println(buildId+"------------------------------");
+        return rpmsBuildMapper.deleteByPrimaryKey(buildId);
     }
+
 
     @Override
     public int updateBuild(int id ,RpmsBuildPojo rpmsBuild) {
@@ -42,6 +45,11 @@ public class RpmsBuildServiceImpl implements RpmsBuildService {
     @Override
     public int addBuilds(RpmsBuildPojo rpmsBuild) {
         return 0;
+    }
+
+    @Override
+    public int reDelBuild(int buildId) {
+        return rpmsBuildMapper.reDelBuild(buildId);
     }
 
 

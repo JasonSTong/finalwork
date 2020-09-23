@@ -1,6 +1,7 @@
 package com.ha5fun.finalwork.service;
 
 import com.ha5fun.finalwork.pojo.RpmsBuildPojo;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -28,7 +29,7 @@ public interface RpmsBuildService {
      * @param buildId
      * @return 0 : 成功 1 ：失败
      */
-    int deleteBuilds(int buildId , RpmsBuildPojo rpmsBuildPojo);
+    int deleteBuilds(int buildId );
 
     /**
      * 修改builds
@@ -44,4 +45,5 @@ public interface RpmsBuildService {
      */
     int addBuilds(RpmsBuildPojo rpmsBuild);
 
+    int reDelBuild (int BuildId);
 }

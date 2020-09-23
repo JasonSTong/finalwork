@@ -18,16 +18,34 @@
     from finalwork.RPMS_build
   </select>
 
+  <update id="deleteByPrimaryKey" parameterType="int">
+    update RPMS_build set build_delete = 1 where build_id = #{buildId}
+  </update>
+
+  <update id="reDelBuild" parameterType="int">
+    update RPMS_build set build_delete = 0 where build_id = #{buildId}
+  </update>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
     from RPMS_build
     where build_id = #{buildId,jdbcType=INTEGER}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
-    delete from RPMS_build
-    where build_id = #{buildId,jdbcType=INTEGER}
-  </delete>
   <insert id="insert" keyColumn="build_id" keyProperty="buildId" parameterType="com.ha5fun.finalwork.pojo.RpmsBuildPojo" useGeneratedKeys="true">
     insert into RPMS_build (build_name, build_start, build_finish, 
       build_leak, build_area, build_delete
@@ -103,13 +121,19 @@
     </set>
     where build_id = #{buildId,jdbcType=INTEGER}
   </update>
+
+
+
+
+
+
   <update id="updateByPrimaryKey" parameterType="com.ha5fun.finalwork.pojo.RpmsBuildPojo">
     update RPMS_build
     set build_name = #{buildName,jdbcType=VARCHAR},
       build_start = #{buildStart,jdbcType=DATE},
       build_finish = #{buildFinish,jdbcType=DATE},
       build_leak = #{buildLeak,jdbcType=VARCHAR},
-      build_area = #{buildArea,jdbcType=FLOAT},
+      build_area = #{buildArea,jdbcType=FLOAT},x
       build_delete = #{buildDelete,jdbcType=INTEGER}
     where build_id = #{buildId,jdbcType=INTEGER}
   </update>
